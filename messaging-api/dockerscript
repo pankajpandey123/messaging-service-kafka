@@ -2,5 +2,5 @@ in msg-api folder run-
 docker build -t messaging-api . 
 
 at  docker-compose.yml
-docker-compose up 
+docker-compose up -d --nobuild
 
