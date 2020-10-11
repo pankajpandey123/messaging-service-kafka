@@ -17,14 +17,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MessagingController {
 
-	private KafkaTemplate< String, ProjectStatusDto> kafkaProducer;
+	private KafkaTemplate<String, ProjectStatusDto> kafkaProducer;
 	private KafkaProperties properties;
+
 	@PostMapping
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	
-	public void sendProjectStatusEmail(@RequestBody ProjectStatusDto pdto){
-		log.info("send project status change email:"+pdto.toString());
-		  kafkaProducer.send(properties.getTopics().getProjStatusChange(),pdto);
+
+	public void sendProjectStatusEmail(@RequestBody ProjectStatusDto pdto) {
+		log.info("send project status change email:" + pdto.toString());
+		kafkaProducer.send(properties.getTopics().getProjStatusChange(), pdto);
 	}
-	
+
 }

@@ -1,9 +1,7 @@
-spring:
-  profiles:  default,development,test,docker
 info:
   version: 0.0.1
 
- 
+spring:
   application:
     name: messaging-api
 
@@ -20,7 +18,7 @@ info:
   kafka:
     properties:
       security.protocol: 'PLAINTEXT'
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: localhost:9092
     producer:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -43,8 +41,8 @@ info:
       mail.smtp.auth: false
       mail.smtp.starttls.enable: false
     addresses:
-      from: pankaj.pandey.biura@gmail.com
-      replyTo: pankaj.pandey.office@gmail.com
+      from: dev@sipios.com
+      replyTo: no-reply@sipios.com
 
   thymeleaf:
     check-template-location: true
@@ -62,11 +60,11 @@ server:
         http-only: false
         secure: false
 
+ 
+
+
 kafka:
   enabled: true
   topics:
-    project-status-changed: DEV_project_status_changed_1_0_p
-  consumer:
-      group-id: tpd-loggers
-      auto-offset-reset: earliest
-      bootstrap-servers: localhost:9092
+    project-status-changed: DEV_project_status_changed_1_0
+  

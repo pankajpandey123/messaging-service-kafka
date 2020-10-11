@@ -12,16 +12,16 @@ import lombok.NoArgsConstructor;
 @Component
 @ConfigurationProperties("kafka")
 public class KafkaProperties {
-	
+
 	private boolean enabled;
 	private Topics topics;
+
 	@Data
 	@Builder
 	@NoArgsConstructor
 	@AllArgsConstructor
-	public static class Topics{
+	public static class Topics {
 		private String projStatusChange;
 	}
-	
 
 }
