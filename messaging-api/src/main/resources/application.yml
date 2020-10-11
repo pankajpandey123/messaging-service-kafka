@@ -60,11 +60,8 @@ server:
         http-only: false
         secure: false
 
- 
-
-
 kafka:
   enabled: true
   topics:
-    project-status-changed: DEV_project_status_changed_1_0
-  
+    project-status-changed: DEV_project_status_changed_1_0_pu
+
