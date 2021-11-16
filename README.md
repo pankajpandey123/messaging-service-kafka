@@ -1,4 +1,5 @@
-# Read Me First
+# Read Me Guide
+* Use maven to setup at local IDE.
 The following was discovered as part of building this project:
 
 * The original package name 'com.mesg.messaging-service' is invalid and this project uses 'com.mesg.messagingservice' instead.
